@@ -1,5 +1,8 @@
 FROM centos:8
 
+ADD /usr/bin/qemu-aarch64-static /usr/bin/qemu-aarch64-static
+ADD /usr/bin/qemu-arm-static /usr/bin/qemu-arm-static
+
 RUN yum -y update && \
     yum install -y rpm-build curl ca-certificates gcc gcc-c++ cmake make bash \
                    wget unzip systemd-devel wget flex bison \
